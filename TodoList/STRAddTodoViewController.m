@@ -23,6 +23,7 @@
     if (self) {
         // Custom initialization
     }
+    
     return self;
 }
 
@@ -37,6 +38,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField*)theTextField {
+    [theTextField resignFirstResponder];
+    return YES;
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
