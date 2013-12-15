@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "STRTodo.h"
 
 @interface STRAddTodoViewController : UIViewController
+
+@property STRTodo *todoItem;
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D52E3152185D456B008C1FD3 /* STRAddTodoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52E3151185D456B008C1FD3 /* STRAddTodoViewController.m */; };
 		D5A05998185D019100EFBD99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A05997185D019100EFBD99 /* Foundation.framework */; };
 		D5A0599A185D019100EFBD99 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A05999185D019100EFBD99 /* CoreGraphics.framework */; };
 		D5A0599C185D019100EFBD99 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A0599B185D019100EFBD99 /* UIKit.framework */; };
@@ -23,7 +24,6 @@
 		D5A059C1185D019100EFBD99 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D5A059BF185D019100EFBD99 /* InfoPlist.strings */; };
 		D5A059C3185D019100EFBD99 /* TodoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A059C2185D019100EFBD99 /* TodoListTests.m */; };
 		D5A059CD185D01AB00EFBD99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5A059CC185D01AB00EFBD99 /* Main.storyboard */; };
-		D5A059D3185D099E00EFBD99 /* STRAddTodoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A059D2185D099E00EFBD99 /* STRAddTodoViewController.m */; };
 		D5A059D6185D09FB00EFBD99 /* STRTodosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A059D5185D09FB00EFBD99 /* STRTodosViewController.m */; };
 		D5A059D9185D0CD700EFBD99 /* STRTodo.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A059D8185D0CD700EFBD99 /* STRTodo.m */; };
 /* End PBXBuildFile section */
@@ -39,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D52E3150185D456B008C1FD3 /* STRAddTodoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRAddTodoViewController.h; sourceTree = "<group>"; };
+		D52E3151185D456B008C1FD3 /* STRAddTodoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRAddTodoViewController.m; sourceTree = "<group>"; };
 		D5A05994185D019100EFBD99 /* TodoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5A05997185D019100EFBD99 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D5A05999185D019100EFBD99 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,8 +60,6 @@
 		D5A059C0185D019100EFBD99 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D5A059C2185D019100EFBD99 /* TodoListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoListTests.m; sourceTree = "<group>"; };
 		D5A059CC185D01AB00EFBD99 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
-		D5A059D1185D099E00EFBD99 /* STRAddTodoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STRAddTodoViewController.h; path = ../STRAddTodoViewController.h; sourceTree = "<group>"; };
-		D5A059D2185D099E00EFBD99 /* STRAddTodoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STRAddTodoViewController.m; path = ../STRAddTodoViewController.m; sourceTree = "<group>"; };
 		D5A059D4185D09FB00EFBD99 /* STRTodosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRTodosViewController.h; sourceTree = "<group>"; };
 		D5A059D5185D09FB00EFBD99 /* STRTodosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STRTodosViewController.m; sourceTree = "<group>"; };
 		D5A059D7185D0CD700EFBD99 /* STRTodo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STRTodo.h; sourceTree = "<group>"; };
@@ -127,8 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				D5A059CC185D01AB00EFBD99 /* Main.storyboard */,
-				D5A059D1185D099E00EFBD99 /* STRAddTodoViewController.h */,
-				D5A059D2185D099E00EFBD99 /* STRAddTodoViewController.m */,
+				D52E3150185D456B008C1FD3 /* STRAddTodoViewController.h */,
+				D52E3151185D456B008C1FD3 /* STRAddTodoViewController.m */,
 				D5A059D4185D09FB00EFBD99 /* STRTodosViewController.h */,
 				D5A059D5185D09FB00EFBD99 /* STRTodosViewController.m */,
 				D5A059A8185D019100EFBD99 /* STRAppDelegate.h */,
@@ -269,11 +269,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5A059D6185D09FB00EFBD99 /* STRTodosViewController.m in Sources */,
-				D5A059D3185D099E00EFBD99 /* STRAddTodoViewController.m in Sources */,
 				D5A059AA185D019100EFBD99 /* STRAppDelegate.m in Sources */,
 				D5A059D9185D0CD700EFBD99 /* STRTodo.m in Sources */,
 				D5A059A6185D019100EFBD99 /* main.m in Sources */,
 				D5A059AD185D019100EFBD99 /* TodoList.xcdatamodeld in Sources */,
+				D52E3152185D456B008C1FD3 /* STRAddTodoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

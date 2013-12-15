@@ -10,6 +10,9 @@
 
 @interface STRAddTodoViewController ()
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+
 @end
 
 @implementation STRAddTodoViewController
@@ -27,6 +30,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self.textField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,5 +38,17 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if (sender != self.doneButton) return;
+        
+    if (self.textField.text.length > 0) {
+        self.todoItem = [[STRTodo alloc] init];
+        self.todoItem.itemName = self.textField.text;
+        self.todoItem.completed = NO;
+    }
+}
+
 
 @end
