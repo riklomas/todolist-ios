@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A3028" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wr0-7t-bGn">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller - Todos-->
+        <scene sceneID="nRC-wY-pmg">
+            <objects>
+                <navigationController title="Todos" definesPresentationContext="YES" id="wr0-7t-bGn" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jsa-m9-kB1">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kTC-fV-hqM" kind="relationship" relationship="rootViewController" id="oJP-ur-Ha1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ryD-eF-5DW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-183" y="141"/>
+        </scene>
+        <!--Todos View Controller - Todos-->
+        <scene sceneID="C0P-VJ-t6k">
+            <objects>
+                <tableViewController id="kTC-fV-hqM" customClass="STRTodosViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8hv-5a-CsZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ListPrototypeCell" id="1ll-8u-AfO">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1ll-8u-AfO" id="SJZ-Jj-ItX">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kTC-fV-hqM" id="QZ3-48-Qwe"/>
+                            <outlet property="delegate" destination="kTC-fV-hqM" id="E3W-Az-hfK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Todos" id="OOJ-lS-zN1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4Ag-2Q-syV">
+                            <connections>
+                                <segue destination="CDk-l7-AR1" kind="push" id="v1r-wZ-wqp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rIB-SZ-Y0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="257" y="141"/>
+        </scene>
+        <!--Add Todo View Controller-->
+        <scene sceneID="YlS-Sx-q9h">
+            <objects>
+                <viewController id="CDk-l7-AR1" customClass="STRAddTodoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9jI-AC-wfk"/>
+                        <viewControllerLayoutGuide type="bottom" id="DPn-z6-5j1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HK4-nQ-qNV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New to-do item" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LlY-gS-Dfj">
+                                <rect key="frame" x="20" y="106" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LlY-gS-Dfj" secondAttribute="trailing" constant="20" id="DdL-q6-yrd"/>
+                            <constraint firstAttribute="trailing" secondItem="LlY-gS-Dfj" secondAttribute="trailing" constant="20" id="LXU-z0-asf"/>
+                            <constraint firstItem="LlY-gS-Dfj" firstAttribute="leading" secondItem="HK4-nQ-qNV" secondAttribute="leading" constant="20" id="f1p-ID-26E"/>
+                            <constraint firstItem="LlY-gS-Dfj" firstAttribute="top" secondItem="9jI-AC-wfk" secondAttribute="bottom" constant="42" id="xYs-KU-YoN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="V5y-Rr-sRS">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="7VI-IB-4KR">
+                            <connections>
+                                <segue destination="mYt-wC-01C" kind="unwind" unwindAction="unwindToList:" id="vz9-PR-ci2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="geC-oB-0hP">
+                            <connections>
+                                <segue destination="mYt-wC-01C" kind="unwind" unwindAction="unwindToList:" id="fSc-Q1-DjS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="geC-oB-0hP" id="f8m-Iq-kmA"/>
+                        <outlet property="textField" destination="LlY-gS-Dfj" id="q2s-vF-L8Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5wV-dA-sak" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="mYt-wC-01C" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="733" y="141"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
