@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "STRTodo.h"
 
 @interface STRTodosViewController : UITableViewController
+
+@property BOOL testing;
 
 @end

@@ -30,6 +30,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self.textField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,13 +42,13 @@
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if (sender != self.doneButton) return;
-    
+        
     if (self.textField.text.length > 0) {
         self.todoItem = [[STRTodo alloc] init];
         self.todoItem.itemName = self.textField.text;
         self.todoItem.completed = NO;
     }
-    
 }
+
 
 @end

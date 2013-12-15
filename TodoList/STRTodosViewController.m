@@ -5,10 +5,8 @@
 //  Created by Rik Lomas on 14/12/2013.
 //  Copyright (c) 2013 Rik Lomas. All rights reserved.
 //
-
 #import "STRTodosViewController.h"
 #import "STRAddTodoViewController.h"
-#import "STRTodo.h"
 
 @interface STRTodosViewController ()
 
@@ -18,17 +16,7 @@
 
 @implementation STRTodosViewController
 
-- (IBAction)unwindToList:(UIStoryboardSegue *)segue
-{
-    
-    STRAddTodoViewController *source = [segue sourceViewController];
-    STRTodo *todo = source.todoItem;
-    
-    if (todo != nil) {
-        [self.todos addObject:todo];
-        [self.tableView reloadData];
-    }
-}
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -44,7 +32,7 @@
     [super viewDidLoad];
     
     self.todos = [[NSMutableArray alloc] init];
-
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -135,7 +123,15 @@
 
  */
 
-
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue
+{
+    STRAddTodoViewController *addTodo = [segue sourceViewController];
+    STRTodo *item = addTodo.todoItem;
+    if (item != nil) {
+        [self.todos addObject:item];
+        [self.tableView reloadData];
+    }
+}
 
 
 @end

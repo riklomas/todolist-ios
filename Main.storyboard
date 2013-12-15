@@ -46,7 +46,7 @@
                     <navigationItem key="navigationItem" title="Todos" id="OOJ-lS-zN1">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="4Ag-2Q-syV">
                             <connections>
-                                <segue destination="CDk-l7-AR1" kind="push" id="v1r-wZ-wqp"/>
+                                <segue destination="CDk-l7-AR1" kind="push" identifier="" id="v1r-wZ-wqp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -55,7 +55,7 @@
             </objects>
             <point key="canvasLocation" x="257" y="141"/>
         </scene>
-        <!--Add Todo View Controller-->
+        <!--Add Todo View Controller - Add todo-->
         <scene sceneID="YlS-Sx-q9h">
             <objects>
                 <viewController id="CDk-l7-AR1" customClass="STRAddTodoViewController" sceneMemberID="viewController">
@@ -72,6 +72,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CDk-l7-AR1" id="GEM-bp-Uqf"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -82,15 +85,11 @@
                             <constraint firstItem="LlY-gS-Dfj" firstAttribute="top" secondItem="9jI-AC-wfk" secondAttribute="bottom" constant="42" id="xYs-KU-YoN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="V5y-Rr-sRS">
-                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="7VI-IB-4KR">
-                            <connections>
-                                <segue destination="mYt-wC-01C" kind="unwind" unwindAction="unwindToList:" id="vz9-PR-ci2"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="Add todo" id="V5y-Rr-sRS">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="rdQ-sm-lsn"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="geC-oB-0hP">
                             <connections>
-                                <segue destination="mYt-wC-01C" kind="unwind" unwindAction="unwindToList:" id="fSc-Q1-DjS"/>
+                                <segue destination="mYt-wC-01C" kind="unwind" unwindAction="unwindToList:" id="0j4-g4-wG6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -102,7 +101,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5wV-dA-sak" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="mYt-wC-01C" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="733" y="141"/>
+            <point key="canvasLocation" x="723" y="141"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
